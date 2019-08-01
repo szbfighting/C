@@ -1,0 +1,124 @@
+# Project: 项目1
+# Makefile created by Dev-C++ 5.11
+
+CPP      = g++.exe
+CC       = gcc.exe
+WINDRES  = windres.exe
+OBJ      = TTMS.o View/Account_UI.o View/Main_Menu.o View/Play_UI.o View/Queries_Menu.o View/Query_Play_UI.o View/Sale_UI.o View/SalesAnalysis_UI.o View/Schedule_UI.o View/Seat_UI.o View/Studio_UI.o View/Ticket_UI.o Service/Account.o Service/EntityKey.o Service/Play.o Service/Sale.o Service/SalesAnalysis.o Service/Schedule.o Service/Seat.o Service/Studio.o Service/Ticket.o Persistence/Account_Persist.o Persistence/EntityKey_Persist.o Persistence/Play_Persist.o Persistence/Query_Persist.o Persistence/Sale_Persist.o Persistence/SalesAnalysis_Persist.o Persistence/Schedule_Persist.o Persistence/Seat_Persist.o Persistence/Studio_Persist.o Persistence/Ticket_Persist.o Common/common.o Common/listTestDrv.o
+LINKOBJ  = TTMS.o View/Account_UI.o View/Main_Menu.o View/Play_UI.o View/Queries_Menu.o View/Query_Play_UI.o View/Sale_UI.o View/SalesAnalysis_UI.o View/Schedule_UI.o View/Seat_UI.o View/Studio_UI.o View/Ticket_UI.o Service/Account.o Service/EntityKey.o Service/Play.o Service/Sale.o Service/SalesAnalysis.o Service/Schedule.o Service/Seat.o Service/Studio.o Service/Ticket.o Persistence/Account_Persist.o Persistence/EntityKey_Persist.o Persistence/Play_Persist.o Persistence/Query_Persist.o Persistence/Sale_Persist.o Persistence/SalesAnalysis_Persist.o Persistence/Schedule_Persist.o Persistence/Seat_Persist.o Persistence/Studio_Persist.o Persistence/Ticket_Persist.o Common/common.o Common/listTestDrv.o
+LIBS     = -L"D:/软件/dev/DevC/MinGW64/lib" -L"D:/软件/dev/DevC/MinGW64/x86_64-w64-mingw32/lib" -static-libgcc
+INCS     = -I"D:/软件/dev/DevC/MinGW64/include" -I"D:/软件/dev/DevC/MinGW64/x86_64-w64-mingw32/include" -I"D:/软件/dev/DevC/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include"
+CXXINCS  = -I"D:/软件/dev/DevC/MinGW64/include" -I"D:/软件/dev/DevC/MinGW64/x86_64-w64-mingw32/include" -I"D:/软件/dev/DevC/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include" -I"D:/软件/dev/DevC/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include/c++"
+BIN      = 项目1.exe
+CXXFLAGS = $(CXXINCS) 
+CFLAGS   = $(INCS) 
+RM       = rm.exe -f
+
+.PHONY: all all-before all-after clean clean-custom
+
+all: all-before $(BIN) all-after
+
+clean: clean-custom
+	${RM} $(OBJ) $(BIN)
+
+$(BIN): $(OBJ)
+	$(CC) $(LINKOBJ) -o $(BIN) $(LIBS)
+
+TTMS.o: TTMS.c
+	$(CC) -c TTMS.c -o TTMS.o $(CFLAGS)
+
+View/Account_UI.o: View/Account_UI.c
+	$(CC) -c View/Account_UI.c -o View/Account_UI.o $(CFLAGS)
+
+View/Main_Menu.o: View/Main_Menu.c
+	$(CC) -c View/Main_Menu.c -o View/Main_Menu.o $(CFLAGS)
+
+View/Play_UI.o: View/Play_UI.c
+	$(CC) -c View/Play_UI.c -o View/Play_UI.o $(CFLAGS)
+
+View/Queries_Menu.o: View/Queries_Menu.c
+	$(CC) -c View/Queries_Menu.c -o View/Queries_Menu.o $(CFLAGS)
+
+View/Query_Play_UI.o: View/Query_Play_UI.c
+	$(CC) -c View/Query_Play_UI.c -o View/Query_Play_UI.o $(CFLAGS)
+
+View/Sale_UI.o: View/Sale_UI.c
+	$(CC) -c View/Sale_UI.c -o View/Sale_UI.o $(CFLAGS)
+
+View/SalesAnalysis_UI.o: View/SalesAnalysis_UI.c
+	$(CC) -c View/SalesAnalysis_UI.c -o View/SalesAnalysis_UI.o $(CFLAGS)
+
+View/Schedule_UI.o: View/Schedule_UI.c
+	$(CC) -c View/Schedule_UI.c -o View/Schedule_UI.o $(CFLAGS)
+
+View/Seat_UI.o: View/Seat_UI.c
+	$(CC) -c View/Seat_UI.c -o View/Seat_UI.o $(CFLAGS)
+
+View/Studio_UI.o: View/Studio_UI.c
+	$(CC) -c View/Studio_UI.c -o View/Studio_UI.o $(CFLAGS)
+
+View/Ticket_UI.o: View/Ticket_UI.c
+	$(CC) -c View/Ticket_UI.c -o View/Ticket_UI.o $(CFLAGS)
+
+Service/Account.o: Service/Account.c
+	$(CC) -c Service/Account.c -o Service/Account.o $(CFLAGS)
+
+Service/EntityKey.o: Service/EntityKey.c
+	$(CC) -c Service/EntityKey.c -o Service/EntityKey.o $(CFLAGS)
+
+Service/Play.o: Service/Play.c
+	$(CC) -c Service/Play.c -o Service/Play.o $(CFLAGS)
+
+Service/Sale.o: Service/Sale.c
+	$(CC) -c Service/Sale.c -o Service/Sale.o $(CFLAGS)
+
+Service/SalesAnalysis.o: Service/SalesAnalysis.c
+	$(CC) -c Service/SalesAnalysis.c -o Service/SalesAnalysis.o $(CFLAGS)
+
+Service/Schedule.o: Service/Schedule.c
+	$(CC) -c Service/Schedule.c -o Service/Schedule.o $(CFLAGS)
+
+Service/Seat.o: Service/Seat.c
+	$(CC) -c Service/Seat.c -o Service/Seat.o $(CFLAGS)
+
+Service/Studio.o: Service/Studio.c
+	$(CC) -c Service/Studio.c -o Service/Studio.o $(CFLAGS)
+
+Service/Ticket.o: Service/Ticket.c
+	$(CC) -c Service/Ticket.c -o Service/Ticket.o $(CFLAGS)
+
+Persistence/Account_Persist.o: Persistence/Account_Persist.c
+	$(CC) -c Persistence/Account_Persist.c -o Persistence/Account_Persist.o $(CFLAGS)
+
+Persistence/EntityKey_Persist.o: Persistence/EntityKey_Persist.c
+	$(CC) -c Persistence/EntityKey_Persist.c -o Persistence/EntityKey_Persist.o $(CFLAGS)
+
+Persistence/Play_Persist.o: Persistence/Play_Persist.c
+	$(CC) -c Persistence/Play_Persist.c -o Persistence/Play_Persist.o $(CFLAGS)
+
+Persistence/Query_Persist.o: Persistence/Query_Persist.c
+	$(CC) -c Persistence/Query_Persist.c -o Persistence/Query_Persist.o $(CFLAGS)
+
+Persistence/Sale_Persist.o: Persistence/Sale_Persist.c
+	$(CC) -c Persistence/Sale_Persist.c -o Persistence/Sale_Persist.o $(CFLAGS)
+
+Persistence/SalesAnalysis_Persist.o: Persistence/SalesAnalysis_Persist.c
+	$(CC) -c Persistence/SalesAnalysis_Persist.c -o Persistence/SalesAnalysis_Persist.o $(CFLAGS)
+
+Persistence/Schedule_Persist.o: Persistence/Schedule_Persist.c
+	$(CC) -c Persistence/Schedule_Persist.c -o Persistence/Schedule_Persist.o $(CFLAGS)
+
+Persistence/Seat_Persist.o: Persistence/Seat_Persist.c
+	$(CC) -c Persistence/Seat_Persist.c -o Persistence/Seat_Persist.o $(CFLAGS)
+
+Persistence/Studio_Persist.o: Persistence/Studio_Persist.c
+	$(CC) -c Persistence/Studio_Persist.c -o Persistence/Studio_Persist.o $(CFLAGS)
+
+Persistence/Ticket_Persist.o: Persistence/Ticket_Persist.c
+	$(CC) -c Persistence/Ticket_Persist.c -o Persistence/Ticket_Persist.o $(CFLAGS)
+
+Common/common.o: Common/common.c
+	$(CC) -c Common/common.c -o Common/common.o $(CFLAGS)
+
+Common/listTestDrv.o: Common/listTestDrv.c
+	$(CC) -c Common/listTestDrv.c -o Common/listTestDrv.o $(CFLAGS)
